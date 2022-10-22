@@ -70,6 +70,6 @@ class KisilerDataSource(var refKisiler : DatabaseReference) {
     }
 
     fun sil(kisi_id:String) {
-        Log.e("Kişi Sil",kisi_id.toString())
+        refKisiler.child(kisi_id).removeValue()
     }
 }
